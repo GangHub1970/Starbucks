@@ -25,3 +25,52 @@ window.addEventListener("scroll", () => {
     badges.style.pointerEvents = "auto";
   }
 });
+
+const noticeSwiper = new Swiper(".notice-line .swiper", {
+  direction: "vertical",
+  autoplay: {
+    delay: 3000,
+  },
+  loop: true,
+  slidesPerView: 1,
+});
+
+const promotionSwiper = new Swiper(".promotion .swiper", {
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  // If we need pagination
+  pagination: {
+    el: ".promotion .swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".promotion .swiper-button-next",
+    prevEl: ".promotion .swiper-button-prev",
+  },
+});
+
+const promotionBtn = document.querySelector(
+  ".notice .textAndBtn .material-icons"
+);
+const promotion = document.querySelector(".promotion");
+const pagination = document.querySelector(".swiper-pagination");
+let promotionIsHide = false;
+
+promotionBtn.addEventListener("click", () => {
+  if (!promotionIsHide) {
+    promotion.classList.add("hide");
+    pagination.style.display = "none";
+  } else {
+    promotion.classList.remove("hide");
+    pagination.style.display = "block";
+  }
+
+  promotionIsHide = !promotionIsHide;
+});
