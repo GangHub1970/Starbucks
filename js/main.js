@@ -43,16 +43,26 @@ const promotionSwiper = new Swiper(".promotion .swiper", {
   slidesPerView: 3,
   spaceBetween: 10,
   centeredSlides: true,
-  // If we need pagination
   pagination: {
     el: ".promotion .swiper-pagination",
     clickable: true,
   },
-
-  // Navigation arrows
   navigation: {
     nextEl: ".promotion .swiper-button-next",
     prevEl: ".promotion .swiper-button-prev",
+  },
+});
+
+const awardSwiper = new Swiper(".awards .swiper", {
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".awards .swiper-button-next",
+    prevEl: ".awards .swiper-button-prev",
   },
 });
 

@@ -7,8 +7,8 @@ function onYouTubePlayerAPIReady() {
   new YT.Player("player", {
     videoId: "An6LvWQuj_8", // 재생할 유튜브 영상 ID(영상 URL 맨 뒤)
     playerVars: {
-      autoplay: true, // 자동 재생 유무
-      loop: true, // 반복 재생 유무
+      autoplay: 1, // 자동 재생 유무
+      loop: 1, // 반복 재생 유무
       playlist: "An6LvWQuj_8", // 반복 재생할 유튜브 영상 ID 목록
     },
     events: {
