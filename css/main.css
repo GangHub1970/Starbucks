@@ -127,3 +127,55 @@ header .sub-menu .search.focused .material-icons {
   pointer-events: none;
   opacity: 0;
 }
+
+header .main-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  /* 메뉴에 hover했을 때 나타나는 요소가 다른 요소에 의해 가리지 않게 해준다. */
+  z-index: 1;
+}
+
+header .main-menu .item {
+}
+
+header .main-menu .item .item__name {
+  padding: 10px 20px 34px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* item의 자식 요소인 item__name과 item__contents 요소 중 하나라도 hover되면
+다음의 CSS를 적용시키기 위해 .item:hover .item__name로 선택자를 지정하였다. */
+header .main-menu .item:hover .item__name {
+  border-radius: 6px 6px 0 0;
+  color: #669900;
+  background-color: #2c2a29;
+}
+
+header .main-menu .item .item__contents {
+  /* position 속성을 fixed로 설정해서 뷰포트를 기준으로 위치를 지정한다. */
+  position: fixed;
+  /* position 속성을 fixed로 설정했을 때, top이나 bottom 속성을 사용하지 않아 수직 위치 값이 없다면,
+  요소의 원래 위치를 그대로 사용한다.
+  따라서 left 속성을 0으로 설정해서 요소가 뷰포트의 왼쪽부터 나타날 수 있게 해준다. */
+  left: 0;
+  display: none;
+  /* width 속성을 100%로 설정해서 뷰포트를 가득 채우게 설정한다. */
+  width: 100%;
+}
+
+header .main-menu .item:hover .item__contents {
+  display: block;
+}
+
+header .main-menu .item .item__contents .contents__menu {
+  background-color: red;
+  height: 200px;
+}
+
+header .main-menu .item .item__contents .contents__texture {
+  background-color: orange;
+  height: 100px;
+}
