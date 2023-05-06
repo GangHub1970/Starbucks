@@ -19,7 +19,8 @@ a {
 
 /* HEADER */
 header {
-  background-color: royalblue;
+  border-bottom: 1px solid #c8c8c8;
+  background-color: #f6f5f0;
 }
 
 header .inner {
@@ -29,7 +30,6 @@ header .inner {
   height: 120px;
   /* 가운데 정렬, width가 명시되어 있어야 한다. */
   margin: 0 auto;
-  background-color: orange;
 }
 
 header .logo {
@@ -45,6 +45,10 @@ header .logo {
 }
 
 header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
 }
 
 header .sub-menu ul.menu {
@@ -86,10 +90,40 @@ header .sub-menu ul.menu li a:hover {
 }
 
 header .sub-menu .search {
+  position: relative;
+  height: 34px;
 }
 
 header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  color: #777;
+  font-size: 12px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: width 0.4s;
+}
+
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: #669900;
 }
 
 header .sub-menu .search .material-icons {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  height: 24px;
+  margin: auto 0;
+  transition: 0.4s;
+}
+
+header .sub-menu .search.focused .material-icons {
+  pointer-events: none;
+  opacity: 0;
 }
