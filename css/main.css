@@ -5,6 +5,8 @@ body {
   font-weight: 400;
   font-family: "Nanum Gothic", sans-serif;
   line-height: 1.4;
+
+  height: 3000px;
 }
 
 img {
@@ -26,6 +28,11 @@ a {
 
 /* HEADER */
 header {
+  /* position 속성을 absolute 또는 fixed로 설정하면 블록 요소의 너비가
+  최대한 작게 설정된다. */
+  position: fixed;
+  top: 0;
+  width: 100%;
   border-bottom: 1px solid #c8c8c8;
   background-color: #f6f5f0;
 }
@@ -140,9 +147,6 @@ header .main-menu {
   z-index: 1;
 }
 
-header .main-menu .item {
-}
-
 header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
   font-family: Arial, sans-serif;
@@ -217,4 +221,18 @@ header .main-menu .item .item__contents .contents__texture h4 {
 header .main-menu .item .item__contents .contents__texture p {
   margin: 4px 0 14px;
   color: #669900;
+}
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+
+header .badges .badge {
+  margin-bottom: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
