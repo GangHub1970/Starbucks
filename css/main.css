@@ -17,19 +17,22 @@ a {
   text-decoration: none;
 }
 
+/* 전체 페이지에서 공통적으로 어떠한 영역을 사용하기 위해 내부 박스의 구조를 지정해놓는다. */
+.inner {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+}
+
 /* HEADER */
 header {
   border-bottom: 1px solid #c8c8c8;
   background-color: #f6f5f0;
 }
 
-header .inner {
-  /* logo의 위치상 부모 요소로 설정한다. */
-  position: relative;
-  width: 1100px;
+/* > 자식 선택자를 사용해서 전체 .inner에 영향을 미치지않게 해준다. */
+header > .inner {
   height: 120px;
-  /* 가운데 정렬, width가 명시되어 있어야 한다. */
-  margin: 0 auto;
 }
 
 header .logo {
@@ -171,11 +174,47 @@ header .main-menu .item:hover .item__contents {
 }
 
 header .main-menu .item .item__contents .contents__menu {
-  background-color: red;
-  height: 200px;
+  background-color: #2c2a29;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul {
+  display: flex;
+  padding: 20px 0;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li {
+  width: 220px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  color: #669900;
 }
 
 header .main-menu .item .item__contents .contents__texture {
-  background-color: orange;
-  height: 100px;
+  padding: 26px 0;
+  font-size: 12px;
+  background-image: url("../images/main_menu_pattern.jpg");
+}
+
+header .main-menu .item .item__contents .contents__texture h4 {
+  font-weight: 700;
+  color: #999;
+}
+
+header .main-menu .item .item__contents .contents__texture p {
+  margin: 4px 0 14px;
+  color: #669900;
 }
