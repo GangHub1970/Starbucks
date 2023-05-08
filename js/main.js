@@ -36,3 +36,12 @@ window.addEventListener(
     }
   }, 300)
 );
+
+const fadeEls = document.querySelectorAll(".visual .fade-in");
+fadeEls.forEach((fadeEl, index) => {
+  gsap.to(fadeEl, 1, {
+    // 시간차를 두고 하나씩 나타나게 하기위해 index 값을 받아 1초씩 뒤에 나타나도록 설정한다.
+    delay: (index + 1) * 0.7,
+    opacity: 1,
+  });
+});
