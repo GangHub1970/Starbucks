@@ -76,9 +76,11 @@ const promotionUploadBtn = promotionToggleBtn.querySelector(".material-icons");
 let isHidePromotion = false;
 
 promotionToggleBtn.addEventListener("click", () => {
+  // isHidePromotion 값을 변경하며 hide 클래스를 추가/삭제한다.
   isHidePromotion = !isHidePromotion;
   if (isHidePromotion) {
     promotionEl.classList.add("hide");
+    // 토글 버튼이 클릭될 때마다 버튼을 회전시켜 방향을 맞춰준다.
     promotionUploadBtn.style.transform = "rotate(180deg)";
   } else {
     promotionEl.classList.remove("hide");

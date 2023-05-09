@@ -477,6 +477,9 @@ header .badges .badge {
 .notice .promotion .swiper {
   position: absolute;
   top: 40px;
+  /* 요소를 left: 50% 속성으로 왼쪽에서 요소 너비의 반 만큼 밀어낸 다음,
+  margin-left 속성의 값을 -(요소 크기의 반) 만큼 설정해주어서 요소를 다시
+  왼쪽으로 요소 너비의 반만큼 밀어 요소가 가운데에 위치하게 만들었다. */
   left: 50%;
   display: flex;
   justify-content: center;
@@ -505,6 +508,7 @@ header .badges .badge {
 }
 
 .notice .promotion .swiper-pagination {
+  /* swiperjs에 의해 기본적으로 pagination이 position 속성을 가지고있어 바로 값을 입력한다. */
   bottom: 40px;
   left: 0;
   right: 0;
@@ -560,5 +564,6 @@ header .badges .badge {
 
 .notice .promotion .swiper-button-prev::after,
 .notice .promotion .swiper-button-next::after {
+  /* swiperjs에서 제공하는 버튼의 화살표를 제거한다. */
   display: none;
 }
