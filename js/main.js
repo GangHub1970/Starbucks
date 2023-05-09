@@ -51,3 +51,37 @@ new Swiper(".notice-line .swiper", {
   loop: true,
   autoplay: true,
 });
+
+new Swiper(".promotion .swiper", {
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  centeredSlides: true, // active 슬라이드를 중간에 보여준다.
+  slidesPerView: 3, // 한번에 3개의 슬라이드를 보여준다.
+  spaceBetween: 10, // 슬라이드 사이 여백
+  pagination: {
+    el: ".promotion .swiper-pagination",
+    clickable: true, // 사용자의 페이지 번호 요소 제어 가능 여부
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const promotionEl = document.querySelector(".promotion");
+const promotionToggleBtn = document.querySelector(".toggle-promotion");
+const promotionUploadBtn = promotionToggleBtn.querySelector(".material-icons");
+let isHidePromotion = false;
+
+promotionToggleBtn.addEventListener("click", () => {
+  isHidePromotion = !isHidePromotion;
+  if (isHidePromotion) {
+    promotionEl.classList.add("hide");
+    promotionUploadBtn.style.transform = "rotate(180deg)";
+  } else {
+    promotionEl.classList.remove("hide");
+    promotionUploadBtn.style.transform = "rotate(0)";
+  }
+});

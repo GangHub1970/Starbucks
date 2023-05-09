@@ -461,3 +461,104 @@ header .badges .badge {
 .notice .notice-line .inner__right .toggle-promotion .material-icons {
   font-size: 30px;
 }
+
+.notice .promotion {
+  position: relative;
+  height: 693px;
+  background-color: #f6f5ef;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+
+.notice .promotion.hide {
+  height: 0;
+}
+
+.notice .promotion .swiper {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: calc(819px * 3 + 20px);
+  height: 553px;
+  margin-left: calc((819px * 3 + 20px) / -2);
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide {
+  position: relative;
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.notice .promotion .swiper-pagination {
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+
+.notice .promotion .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  background-color: transparent;
+  background-image: url("../images/promotion_slide_pager.png");
+  outline: none;
+}
+
+.notice .promotion .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+
+.notice .promotion .swiper-pagination .swiper-pagination-bullet-active {
+  background-image: url("../images/promotion_slide_pager_on.png");
+}
+
+.notice .promotion .swiper-button-prev,
+.notice .promotion .swiper-button-next {
+  position: absolute;
+  top: 300px;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  outline: none;
+  color: #333;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.notice .promotion .swiper-button-prev {
+  left: 50%;
+  margin-left: -480px;
+}
+
+.notice .promotion .swiper-button-next {
+  right: 50%;
+  margin-right: -480px;
+}
+
+.notice .promotion .swiper-button-prev:hover,
+.notice .promotion .swiper-button-next:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.notice .promotion .swiper-button-prev::after,
+.notice .promotion .swiper-button-next::after {
+  display: none;
+}
