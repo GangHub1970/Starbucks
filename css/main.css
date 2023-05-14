@@ -567,3 +567,53 @@ header .badges .badge {
   /* swiperjs에서 제공하는 버튼의 화살표를 제거한다. */
   display: none;
 }
+
+/* REWARDS */
+.rewards {
+  position: relative;
+}
+
+.rewards .bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #272727;
+}
+
+.rewards .bg-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #d5c798;
+}
+
+.rewards .inner {
+  height: 241px;
+  background-image: url("../images/rewards.jpg");
+}
+
+.rewards .btn-group {
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+}
+
+.rewards .btn-group .btn.sign-in {
+  width: 110px;
+}
+
+.rewards .btn-group .btn.sign-up {
+  margin-right: 10px;
+}
+
+.rewards .btn-group .btn.gift {
+  flex-grow: 1;
+  margin-top: 10px;
+}
