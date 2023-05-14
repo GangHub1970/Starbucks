@@ -60,6 +60,7 @@ new Swiper(".promotion .swiper", {
   centeredSlides: true, // active 슬라이드를 중간에 보여준다.
   slidesPerView: 3, // 한번에 3개의 슬라이드를 보여준다.
   spaceBetween: 10, // 슬라이드 사이 여백
+  loopedSlides: 2,
   pagination: {
     el: ".promotion .swiper-pagination",
     clickable: true, // 사용자의 페이지 번호 요소 제어 가능 여부
