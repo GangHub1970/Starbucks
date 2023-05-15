@@ -88,3 +88,22 @@ promotionToggleBtn.addEventListener("click", () => {
     promotionUploadBtn.style.transform = "rotate(0)";
   }
 });
+
+function floatingObject(selector, delay, size) {
+  gsap.to(selector, random(1.5, 2.5), {
+    y: size,
+    repeat: -1, // 무한 반복
+    yoyo: true, // 되돌아가는 애니메이션까지 실행
+    ease: "power1.inOut",
+    delay: random(0, delay),
+  });
+}
+
+floatingObject(".floating1", 1, 15);
+floatingObject(".floating2", 0.5, 15);
+floatingObject(".floating3", 1.5, 20);
+
+// 범위에 해당하는 랜덤 수를 소수점 2자리까지 생성하는 함수
+function random(min, max) {
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2));
+}
