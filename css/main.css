@@ -5,8 +5,6 @@ body {
   font-weight: 400;
   font-family: "Nanum Gothic", sans-serif;
   line-height: 1.4;
-
-  height: 3000px;
 }
 
 img {
@@ -952,4 +950,94 @@ header .badges .badge {
 .awards .swiper-button-prev::after,
 .awards .swiper-button-next::after {
   display: none;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #333;
+  background-color: #272727;
+}
+
+footer .inner {
+  padding: 40px 0 60px 0;
+}
+
+footer .menu {
+  display: flex;
+  justify-content: center;
+}
+
+footer .menu li {
+  position: relative;
+}
+
+footer .menu li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  width: 3px;
+  height: 3px;
+  margin: auto 0;
+  background-color: #555;
+}
+
+footer .menu li:last-child::before {
+  display: none;
+}
+
+footer .menu li a {
+  /* 인라인 요소 <a>에 padding을 주기위해 block으로 변경한다. */
+  display: block;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ccc;
+}
+
+footer .menu li a.green {
+  color: #669900;
+}
+
+footer .btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+footer .btn-group .btn {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+footer .btn-group .btn:last-child {
+  margin-right: 0;
+}
+
+footer .info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer .info span {
+  margin-right: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+footer .info span:last-child {
+  margin-right: 0;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #999;
+}
+
+footer .logo {
+  /* img 요소가 block이고 margin 속성을 auto로 설정하면 width 속성 없이도 가운데 정렬을 할 수 있다. */
+  margin: 30px auto 0;
 }
