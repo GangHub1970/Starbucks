@@ -907,3 +907,49 @@ header .badges .badge {
 .find-store .text-group .description {
   margin-bottom: 20px;
 }
+
+/* AWARDS */
+.awards {
+  background-color: #272727;
+}
+
+.awards .inner {
+  padding: 40px 0;
+}
+
+.awards .swiper {
+  width: 100%;
+  height: 40px;
+}
+
+.awards .swiper-button-prev,
+.awards .swiper-button-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  outline: none;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.awards .swiper-button-prev {
+  left: -100px;
+}
+
+.awards .swiper-button-next {
+  right: -100px;
+}
+
+.awards .swiper-button-prev::after,
+.awards .swiper-button-next::after {
+  display: none;
+}
