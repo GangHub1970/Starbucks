@@ -1041,3 +1041,20 @@ footer .logo {
   /* img 요소가 block이고 margin 속성을 auto로 설정하면 width 속성 없이도 가운데 정렬을 할 수 있다. */
   margin: 30px auto 0;
 }
+
+#to-top {
+  position: fixed;
+  bottom: 30px;
+  right: -70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  background-color: #333;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 9;
+}
