@@ -107,3 +107,12 @@ floatingObject(".floating3", 1.5, 20);
 function random(min, max) {
   return parseFloat((Math.random() * (max - min) + min).toFixed(2));
 }
+
+const spyEls = document.querySelectorAll("section.scroll-spy");
+spyEls.forEach((spyEl) => {
+  // 요소가 화면에 보이는지 보이지 않는지를 확인하는 메서드이다.
+  new ScrollMagic.Scene({
+    triggerElement: spyEl,  // 보여짐 여부를 감시할 요소를 지정
+    triggerHook: .8,  // 화면의 맨위를 0, 맨밑을 1로 두고, 어느 지점에서 요소가 나타나면 효과를 나타낼건지 지정
+  }).setClassToggle(spyEl, 'show').addTo(new ScrollMagic.Controller());
+});
